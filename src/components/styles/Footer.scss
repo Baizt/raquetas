@@ -1,0 +1,26 @@
+@import '../../styles/colors.scss';
+
+footer{
+	background-color: $colorPrimario;
+	padding: 64px 63px 58px 78px;
+	display: grid;
+	grid-template-areas: "menusFooter . pelotaFooter";
+}
+
+.menu-horizontal .menu-item {
+	color: #000;
+}
+.menu-horizontal .red-social {
+	color: #fff;
+	border-radius: 100%;
+	padding: 10px;
+	border: 1px solid #fff;
+}
+.menus-footer{
+	grid-area: menusFooter;
+}
+.icono-pelota{
+	justify-self: end;
+	align-self: center;
+	grid-area: pelotaFooter;
+}
