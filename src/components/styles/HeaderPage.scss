@@ -1,0 +1,45 @@
+@import '../../styles/sizes.scss';
+
+.main-menu-section{
+	position: absolute;
+	top: 0;
+	display: none;
+	margin-top: 25px;
+	@media screen and (min-width: $min-md){
+		position: fixed;
+		display: grid;
+		grid-gap: 80px;
+		width: 100%;
+		align-items: flex-end;
+		grid-template-columns: 120px 1fr 140px;
+	}
+	.logo-tennis{
+		justify-self: center;
+		img{
+			width: 45px;
+			height: 45px;
+		}
+	}
+	.main-menu-container{
+		width: 100%;
+		@media screen and (min-width: $min-lg){
+			width: 75%;
+		}
+		@media screen and (min-width: $min-xl){
+			width: 50%;
+		}
+		a{
+			color: #fff;
+		}
+	}
+	.lang-menu{
+		display: grid;
+		grid-auto-flow: column;
+		grid-gap: 30px;
+		justify-content: start;
+		a{
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+}

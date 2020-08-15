@@ -71,7 +71,7 @@ class App extends React.Component {
 	render(){
 		return (
 			<div className="App">
-				<HeaderPage />
+				<HeaderPage menu={this.state.menu} />
 				<HomePage />
 				<FooterPage menu={this.state.menu} redes={this.state.redes} />
 			</div>

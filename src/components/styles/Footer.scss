@@ -4,14 +4,19 @@
 footer{
 	background-color: $mainColor;
 	padding: 20px;
-	justify-content: normal;
 	display: grid;
-	grid-template-areas: "menusFooter menusFooter . pelotaFooter";
+	grid-gap: 20px;
+	justify-content: normal;
+	grid-template-areas:
+		"menuFooter pelotaFooter"
+		"redesMenu redesMenu";
 	@media screen and (min-width: $min-md){
 		padding: 64px 63px 58px 78px;
+		grid-template-areas:
+			"menuFooter menuFooter menuFooter menuFooter pelotaFooter"
+			"redesMenu . . . pelotaFooter";
 	}
 }
-
 .main-menu {
 	grid-area: mainMenuFooter;
 	text-align: start;
@@ -22,17 +27,19 @@ footer{
 .menu-horizontal .menu-item {
 	color: #000;
 }
+.footer-menu{
+	grid-area: menuFooter;
+}
 .redes-menu{
-	grid-area: redesMenuFooter;
+	grid-area: redesMenu;
 	padding: 0;
 	justify-items: center;
 	align-items: center;
 	display: grid;
 	grid-gap: 10px;
-	grid-auto-flow: row;
+	grid-auto-flow: column;
 	@media screen and (min-width: $min-md){
 		grid-gap: 0;
-		grid-auto-flow: column;
 		justify-items: start;
 	}
 	.red-social {
@@ -51,23 +58,9 @@ footer{
 		}
 	}
 }
-.menus-footer{
-	grid-area: menusFooter;
-	display: grid;
-	grid-template-areas: "mainMenuFooter redesMenuFooter";
-	grid-gap: 20px;
-	@media screen and (min-width: $min-sm){
-		grid-template-areas: "mainMenuFooter redesMenuFooter";
-	}
-	@media screen and (min-width: $min-md){
-		grid-template-areas:
-			"mainMenuFooter mainMenuFooter mainMenuFooter mainMenuFooter"
-			"redesMenuFooter . . .";
-	}
-}
-.icono-pelota{
+.logo-tennis-footer{
 	justify-self: end;
-	align-self: end;
+	align-self: start;
 	grid-area: pelotaFooter;
 	@media screen and (min-width: $min-md){
 		align-self: center;

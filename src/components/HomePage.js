@@ -1,4 +1,5 @@
 import React from 'react';
+import BannerHome from './BannerHome';
 import Historia from './Historia';
 import Carrusel from './Carrusel';
 import FullImg from './FullImg';
@@ -18,6 +19,7 @@ class HomePage extends React.Component {
 	render(){
 		return(
 			<div>
+				<BannerHome />
 				<Historia historia={this.state.historia} />
 				<Carrusel/>
 				<FullImg image={homeFooterImg} />

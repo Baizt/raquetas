@@ -15,9 +15,8 @@ function Historia(props) {
 				</div>
 				
 				<div className="historia-btn">
-					<a href="#">
+					<a href="#" className="btn">
 						<span className="btn-txt">Historia</span>
-						<span className="flecha">→</span>
 					</a>
 				</div>
 			</article>
