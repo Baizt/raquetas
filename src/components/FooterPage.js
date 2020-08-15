@@ -1,26 +1,32 @@
-import React from 'react';
+import React		from 'react';
+import LogoTennis	from '../images/logoTennis.png';
 import './styles/Footer.scss'
 
 function FooterPage(props){
+	console.log(window)
 	return(
 		<footer>
-			<nav className="menus-footer">
-				<ul className="menu-horizontal">
-					{props.menu.map((link)=>{
+			<div className="menus-footer">
+				<nav className="menu-horizontal main-menu">
+					{props.menu.map((link, index)=>{
 						return(
-							<li><a href={link.liga} className="menu-item">{link.nombre}</a></li>
+							<a href={link.liga} className="menu-item" key={index}>{link.nombre}</a>
 						)
 					})}
-				</ul>
-				<ul className="menu-horizontal">
-					{props.redes.map((link)=>{
+				</nav>
+				<nav className="redes-menu">
+					{props.redes.map((link, index)=>{
 						return(
-							<li><a href={link.liga} className="red-social">{link.nombre}</a></li>
+							<a href={link.liga} className="red-social" key={index}>
+								<img src={link.icono} alt={link.nombre} />
+							</a>
 						)
 					})}
-				</ul>
-			</nav>
-			<div className="icono-pelota"></div>
+				</nav>
+			</div>
+			<div className="icono-pelota">
+				<img src={LogoTennis} alt="Logo de Tennis"/>
+			</div>
 		</footer>
 	)
 }

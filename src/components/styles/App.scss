@@ -1,3 +1,4 @@
+@import '../../styles/sizes.scss';
 @import '../../styles/colors.scss';
 
 .App {
@@ -41,47 +42,13 @@
 
 .menu-horizontal{
 	padding: 0;
-	display: flex;
-	li{
-		display:inline-block;
-		padding: 10px 0;
-		margin: 0 3%;
-		a{
-			text-decoration: none;
-		}
-		.selected{
-			font-weight: bold;
-		}
-	}
-}
-.icono-pelota{
-  background-color: #fff;
-  border-radius: 100%;
-  width: 50px;
-  height: 50px;
-  position: relative;
-  &::before{
-    content: '';
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 50px;
-    top: -25%;
-    left: -50%;
-    border-radius: 100%;
-    border-right: 2px solid $colorPrimario;
-    border-bottom: 2px solid $colorPrimario;
+  display: grid;
+  grid-auto-flow: row;
+  justify-items: start;
+	@media screen and (min-width: $min-md){
+    grid-auto-flow: column;
   }
-  &::after{
-    content: '';
-    position: absolute;
-    display: block;
-    width: 50px;
-    height: 50px;
-    bottom: -25%;
-    right: -75%;
-    border-radius: 100%;
-    border-left: 2px solid $colorPrimario;
-    border-top: 2px solid $colorPrimario;
+  a{
+    text-decoration: none;
   }
 }

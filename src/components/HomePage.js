@@ -6,13 +6,11 @@ import homeFooterImg from '../images/homeFooter.jpg';
 
 class HomePage extends React.Component {
 	state = {
-		historias:[
-			{
-				categoria:'Tennis',
-				categoria:'Raquetas.Accesorios.Pelotas.',
-				categoria:'Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional.',
-			}
-		],
+		historia:{
+			categoria:'Tennis',
+			titulo:'Raquetas.Accesorios.Pelotas.',
+			intro:'Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional.',
+		},
 		raquetas:[
 			//modelos de raquetas
 		]
@@ -20,7 +18,7 @@ class HomePage extends React.Component {
 	render(){
 		return(
 			<div>
-				<Historia/>
+				<Historia historia={this.state.historia} />
 				<Carrusel/>
 				<FullImg image={homeFooterImg} />
 			</div>

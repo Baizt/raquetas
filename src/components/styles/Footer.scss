@@ -1,26 +1,79 @@
+@import '../../styles/sizes.scss';
 @import '../../styles/colors.scss';
 
 footer{
-	background-color: $colorPrimario;
-	padding: 64px 63px 58px 78px;
+	background-color: $mainColor;
+	padding: 20px;
+	justify-content: normal;
 	display: grid;
-	grid-template-areas: "menusFooter . pelotaFooter";
+	grid-template-areas: "menusFooter menusFooter . pelotaFooter";
+	@media screen and (min-width: $min-md){
+		padding: 64px 63px 58px 78px;
+	}
 }
 
+.main-menu {
+	grid-area: mainMenuFooter;
+	text-align: start;
+	@media screen and (min-width: $min-md){
+		text-align: center;
+	}
+}
 .menu-horizontal .menu-item {
 	color: #000;
 }
-.menu-horizontal .red-social {
-	color: #fff;
-	border-radius: 100%;
-	padding: 10px;
-	border: 1px solid #fff;
+.redes-menu{
+	grid-area: redesMenuFooter;
+	padding: 0;
+	justify-items: center;
+	align-items: center;
+	display: grid;
+	grid-gap: 10px;
+	grid-auto-flow: row;
+	@media screen and (min-width: $min-md){
+		grid-gap: 0;
+		grid-auto-flow: column;
+		justify-items: start;
+	}
+	.red-social {
+		color: #fff;
+		border-radius: 100%;
+		width: 35px;
+		height: 35px;
+		box-sizing: border-box;
+		border: 1px solid #fff;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		img{
+			width: 12px;
+			height: auto;
+		}
+	}
 }
 .menus-footer{
 	grid-area: menusFooter;
+	display: grid;
+	grid-template-areas: "mainMenuFooter redesMenuFooter";
+	grid-gap: 20px;
+	@media screen and (min-width: $min-sm){
+		grid-template-areas: "mainMenuFooter redesMenuFooter";
+	}
+	@media screen and (min-width: $min-md){
+		grid-template-areas:
+			"mainMenuFooter mainMenuFooter mainMenuFooter mainMenuFooter"
+			"redesMenuFooter . . .";
+	}
 }
 .icono-pelota{
 	justify-self: end;
-	align-self: center;
+	align-self: end;
 	grid-area: pelotaFooter;
+	@media screen and (min-width: $min-md){
+		align-self: center;
+	}
+	img{
+		width: 45px;
+		height: 45px;
+	}
 }

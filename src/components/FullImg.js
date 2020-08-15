@@ -3,9 +3,9 @@ import './styles/FullImg.scss';
 
 function FullImg(props){
 	return(
-		<div className="full-img-container">
+		<section className="full-img-container">
 			<img src={props.image} alt="Gaël Monfils utilizando nuestras Raquetas"/>
-		</div>
+		</section>
 	)
 }
 
