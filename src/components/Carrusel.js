@@ -24,12 +24,24 @@ class Carrusel extends React.Component {
 			}
 		})
 	}
-	changeCarrusel = numLugares =>{
+	changeCarrusel = isNext =>{
+		const ele = document.getElementById(this.props.carruselID);
 		const {childrenLength, posicion} = this.state.carrusel;
-		const new_posicion = posicion + numLugares;
-		const new_left = (childrenLength * new_posicion * -1)+ 'px';
+		const old_left = (childrenLength * posicion * -1);
 
-		document.getElementById(this.props.carruselID).style.left = new_left;
+		const new_posicion = isNext ? posicion+1 : posicion-1;
+		const new_left = (childrenLength * new_posicion * -1);
+
+		ele.animate(
+			[
+				{ transform: `translateX(${old_left}px)` }, 
+				{ transform: `translateX(${new_left}px)` },
+			],
+			{
+			duration: 500,
+			iterations: 1
+		});
+		ele.style.transform = `translateX(${new_left}px)`;
 
 		this.setState({
 			carrusel:{
@@ -41,13 +53,14 @@ class Carrusel extends React.Component {
 	handlePrevImg = e =>{
 		const {posicion} = this.state.carrusel;
 		if(posicion > 0){
-			this.changeCarrusel(-1)
+			this.changeCarrusel(false)
 		}
 	}
 	handleNextImg = e =>{
+		console.log(this.state.carrusel)
 		const {numChildren, posicion} = this.state.carrusel;
 		if(posicion < numChildren-1){
-			this.changeCarrusel(1)
+			this.changeCarrusel(true)
 		}
 	}
 	render(){
@@ -65,8 +78,8 @@ class Carrusel extends React.Component {
 							})}
 						</div>
 						<div className="controles-carrusel">
-							<div className="prev" onClick={this.handlePrevImg}></div>
-							<div className="next" onClick={this.handleNextImg}></div>
+							<div className={`prev ${this.state.carrusel.posicion === 0 ? 'disabled' : ''}`} onClick={this.handlePrevImg}></div>
+							<div className={`next ${this.state.carrusel.posicion === this.state.carrusel.numChildren-1 ? 'disabled' : ''}`} onClick={this.handleNextImg}></div>
 						</div>
 					</div>
 				</aside>

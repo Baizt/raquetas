@@ -79,6 +79,11 @@
 					border-bottom: 8px solid transparent;
 				}
 			}
+			.disabled{
+				background-color: transparent;
+				border: 1px solid $secondColor;
+				box-shadow:none;
+			}
 			.prev{
 				margin-right: 20px;
 				&::before{
