@@ -1,4 +1,5 @@
 {
+  "homepage": "https://baizt.github.io/raquetas/",
   "name": "raquetas",
   "version": "0.1.0",
   "private": true,
@@ -16,7 +17,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+<<<<<<< Updated upstream
     "startNet": "npm install && npm run build && npm start"
+=======
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+>>>>>>> Stashed changes
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -32,5 +38,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^3.1.0"
   }
 }
