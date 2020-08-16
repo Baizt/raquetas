@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/raquetas/static/css/main.62bdbf43.chunk.css",
+    "main.css": "/raquetas/static/css/main.2b65b0c9.chunk.css",
     "main.js": "/raquetas/static/js/main.3a4c8c2a.chunk.js",
     "main.js.map": "/raquetas/static/js/main.3a4c8c2a.chunk.js.map",
     "runtime-main.js": "/raquetas/static/js/runtime-main.5bda4274.js",
@@ -8,9 +8,9 @@
     "static/js/2.757c51a7.chunk.js": "/raquetas/static/js/2.757c51a7.chunk.js",
     "static/js/2.757c51a7.chunk.js.map": "/raquetas/static/js/2.757c51a7.chunk.js.map",
     "index.html": "/raquetas/index.html",
-    "precache-manifest.b97a347d2f27b2ac5745fae8740fa418.js": "/raquetas/precache-manifest.b97a347d2f27b2ac5745fae8740fa418.js",
+    "precache-manifest.7b73d81f9d21f249a5e2deb505237b5a.js": "/raquetas/precache-manifest.7b73d81f9d21f249a5e2deb505237b5a.js",
     "service-worker.js": "/raquetas/service-worker.js",
-    "static/css/main.62bdbf43.chunk.css.map": "/raquetas/static/css/main.62bdbf43.chunk.css.map",
+    "static/css/main.2b65b0c9.chunk.css.map": "/raquetas/static/css/main.2b65b0c9.chunk.css.map",
     "static/js/2.757c51a7.chunk.js.LICENSE.txt": "/raquetas/static/js/2.757c51a7.chunk.js.LICENSE.txt",
     "static/media/babolat-drive.png": "/raquetas/static/media/babolat-drive.729ffce1.png",
     "static/media/Carrusel.scss": "/raquetas/static/media/banner-pelota.8372a896.jpg",
@@ -28,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.5bda4274.js",
     "static/js/2.757c51a7.chunk.js",
-    "static/css/main.62bdbf43.chunk.css",
+    "static/css/main.2b65b0c9.chunk.css",
     "static/js/main.3a4c8c2a.chunk.js"
   ]
 }
