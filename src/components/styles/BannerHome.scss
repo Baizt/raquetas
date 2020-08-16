@@ -7,7 +7,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top center;
-	color: #fff;
+	color: $secondColor;
 	@media screen and (min-width: $min-md){
 		background-position: top right;
 		background-image: url('../../images/homeHead.jpg');
@@ -22,7 +22,7 @@
 	@media screen and (min-width: $min-md){
 		justify-items: start;
 		margin-left: 120px;
-		border-left: 2px solid #fff;
+		border-left: 2px solid $secondColor;
 	}
 	.content-banner{
 		@media screen and (min-width: $min-md){

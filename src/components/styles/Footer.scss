@@ -43,12 +43,12 @@ footer{
 		justify-items: start;
 	}
 	.red-social {
-		color: #fff;
+		color: $secondColor;
 		border-radius: 100%;
 		width: 35px;
 		height: 35px;
 		box-sizing: border-box;
-		border: 1px solid #fff;
+		border: 1px solid $secondColor;
 		display: flex;
 		justify-content: center;
 		align-content: center;

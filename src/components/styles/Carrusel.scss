@@ -1,0 +1,140 @@
+@import '../../styles/sizes.scss';
+@import '../../styles/colors.scss';
+
+.seccion-carrusel{
+	display: grid;
+	grid-template-columns: 1fr;
+	@media screen and (min-width: $min-md){
+		grid-template-columns: 2fr 3fr;
+	}
+}
+.banner-carrusel{
+	background-image: url('../../images/banner-pelota.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top right;
+	padding: 50px 0px 70px 0px;
+	display: grid;
+	justify-content: center;
+	grid-auto-columns: minmax(100px, 300px);
+	@media screen and (min-width: $min-md){
+		justify-content: end;
+		padding: 50px 0 70px 0;
+	}
+	.text-container{
+		color: $secondColor;
+		h2{
+			font-size: 2.5em;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+			line-height: 1.2em;
+			font-weight: normal;
+		}
+		p{
+			font-size: 14px;
+			line-height: 2em;
+			@media screen and (min-width: $min-md){
+				padding-right: 50px;
+			}
+		}
+		.posicion-carrusel{
+			display: flex;
+			margin: 20px 0;
+			div{
+				margin: 0 15px 0 0;
+				background-color: $secondColor;
+				border-radius: 50%;
+				width: 8px;
+				height: 8px;
+				// cursor: pointer;
+			}
+		}
+		.controles-carrusel{
+			display: flex;
+			div{
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				box-shadow: 0px 6px 18px -2px #000;
+				background-color: $mainColor;
+				position: relative;
+				cursor: pointer;
+				&:active{
+				}
+				&::before{
+					position: absolute;
+					content: '';
+					top: calc(50% - 8px);
+					width: 0;
+					height: 0;
+					align-self: center;
+					justify-self: center;
+					display: block;
+					border-top: 8px solid transparent;
+					border-bottom: 8px solid transparent;
+				}
+			}
+			.prev{
+				margin-right: 20px;
+				&::before{
+					left: calc(50% - 8px);
+					border-right: 8px solid $secondColor;
+				}
+			}
+			.next{
+				&::before{
+					left: calc(50% - 4px);
+					border-left: 8px solid $secondColor;
+				}
+			}
+		}
+	}
+}
+.carrusel-container{
+	padding: 50px 0px 70px 40px;
+	display: inherit;
+	.carrusel-window{
+		display: inherit;
+		position: relative;
+		overflow: hidden;
+		height: 344px;
+	}
+}
+.carrusel{
+	display: grid;
+	grid-auto-flow: column;
+	position: absolute;
+	.container-raqueta{
+		width: 288px;
+		height: 344px;
+		display: inline-flex;
+		margin: 0 10px;
+		position: relative;
+		border-radius: 20px;
+		justify-content: center;
+		background-color: #F3F4F8;
+		&::after{
+			content: '';
+			display: block;
+			padding-top: 100%;
+		}
+		&::before{
+			background-color: $mainColor;
+			content: attr(data-index);
+			position: absolute;
+			color: $secondColor;
+			font-size: 14px;
+			border-radius: 50%;
+			padding: 5px 10px;
+			left: 10px;
+			top: 10px;
+		}
+		img{
+			align-self: flex-end;
+			transform: rotate(-45deg);
+			position: absolute;
+			height: 80%;
+			width: auto;
+		}
+	}
+}

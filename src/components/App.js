@@ -66,7 +66,7 @@ class App extends React.Component {
 				liga:'#',
 				title:'',
 			},
-		]
+		],
 	}
 	render(){
 		return (

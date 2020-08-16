@@ -1,10 +1,14 @@
 @import '../../styles/sizes.scss';
+@import '../../styles/colors.scss';
 
 .main-menu-section{
 	position: absolute;
 	top: 0;
 	display: none;
-	margin-top: 25px;
+	padding-top: 25px;
+	padding-bottom: 5px;
+	z-index: 1;
+	background-color: #cccccc8a;
 	@media screen and (min-width: $min-md){
 		position: fixed;
 		display: grid;
@@ -29,7 +33,7 @@
 			width: 50%;
 		}
 		a{
-			color: #fff;
+			color: $secondColor;
 		}
 	}
 	.lang-menu{
@@ -38,7 +42,7 @@
 		grid-gap: 30px;
 		justify-content: start;
 		a{
-			color: #fff;
+			color: $secondColor;
 			text-decoration: none;
 		}
 	}
