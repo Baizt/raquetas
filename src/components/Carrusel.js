@@ -87,7 +87,7 @@ class Carrusel extends React.Component {
 						<div className="carrusel" id={this.props.carruselID}>
 							{this.props.raquetas.map((raqueta, index) =>{
 								return(
-									<div key={index} data-index={index+1} className="container-raqueta">
+									<div key={index} data-index={index+1} className="container-raqueta noselect">
 										<img src={raqueta.imagen} alt={raqueta.nombre}/>
 									</div>
 								)
