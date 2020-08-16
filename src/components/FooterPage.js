@@ -4,7 +4,6 @@ import LogoTennis	from '../images/logoTennis.png';
 import './styles/Footer.scss'
 
 function FooterPage(props){
-	console.log(window)
 	return(
 		<footer>
 			<div className="footer-menu">
@@ -13,7 +12,7 @@ function FooterPage(props){
 			<div className="redes-menu">
 				{props.redes.map((link, index)=>{
 					return(
-						<a href={link.liga} className="red-social" key={index}>
+						<a rel="noopener noreferrer nofollow" target="_blank" href={link.liga} className="red-social" key={index}>
 							<img src={link.icono} alt={link.nombre} />
 						</a>
 					)

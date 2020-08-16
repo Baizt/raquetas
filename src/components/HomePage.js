@@ -14,7 +14,7 @@ class HomePage extends React.Component {
 	state = {
 		historia:{
 			categoria:'Tennis',
-			titulo:'Raquetas.Accesorios.Pelotas.',
+			titulo:'Raquetas.Accesorios.Pelotas',
 			intro:'Conoce nuestras raquetas y aprende a jugar Tennis cómo un profesional.',
 		},
 		raquetas:[

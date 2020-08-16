@@ -13,8 +13,9 @@ function HeaderPage(props){
 				<MainMenu menu={props.menu} />
 			</div>
 			<div className="lang-menu">
-				<a href="#">ES</a>
-				<a href="#">EN</a>
+				<MainMenu menu={props.langs} />
+				{/* <a href="#">ES</a>
+				<a href="#">EN</a> */}
 			</div>
 		</section>
 	)

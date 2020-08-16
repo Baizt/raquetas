@@ -2,6 +2,13 @@ import React from 'react';
 import './styles/Historia.scss';
 
 function Historia(props) {
+	function seccionaTexto(texto, separador) {
+		return texto.split(separador).map(palabra=>{
+			return (
+				<span>{palabra+separador}</span>
+			)
+		})
+	}
 	return(
 		<section className="historia-container">
 			<article className="historia">
@@ -10,7 +17,7 @@ function Historia(props) {
 				</div>
 
 				<div className="historia-texto">
-					<h2 className="titulo">{props.historia.titulo}</h2>
+					<h2 className="titulo">{seccionaTexto(props.historia.titulo, '.')}</h2>
 					<p className="intro">{props.historia.intro}</p>
 				</div>
 				

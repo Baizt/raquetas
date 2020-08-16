@@ -57,7 +57,6 @@ class Carrusel extends React.Component {
 		}
 	}
 	handleNextImg = e =>{
-		console.log(this.state.carrusel)
 		const {numChildren, posicion} = this.state.carrusel;
 		if(posicion < numChildren-1){
 			this.changeCarrusel(true)
@@ -73,7 +72,7 @@ class Carrusel extends React.Component {
 						<div className="posicion-carrusel">
 							{this.props.raquetas.map((raqueta, index) =>{
 								return(
-									<div key={index} index={index} className={this.state.carrusel.posicion == index ? 'select' : ''}></div>
+									<div key={index} index={index} className={this.state.carrusel.posicion === index ? 'select' : ''}></div>
 								)
 							})}
 						</div>

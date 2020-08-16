@@ -4,9 +4,9 @@ import './styles/MainMenu.scss';
 function MainMenu(params) {
 	return(
 		<nav className="menu-horizontal main-menu">
-			{params.menu.map((link, index)=>{
+			{params.menu.elems.map((link, index)=>{
 				return(
-					<a href={link.liga} className="menu-item" key={index}>{link.nombre}</a>
+					<a href={link.liga} className={`menu-item ${params.menu.selected === link.nombre ? 'select' : ''}`} key={index}>{link.nombre}</a>
 				)
 			})}
 		</nav>

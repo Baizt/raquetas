@@ -13,57 +13,75 @@ import './styles/App.scss';
 
 class App extends React.Component {
 	state = {
-		menu:[
-			{
-				nombre:'Inicio',
-				liga:'#',
-				title:'',
-			},
-			{
-				nombre:'Acerca de nosotros',
-				liga:'#',
-				title:'',
-			},
-			{
-				nombre:'Historia',
-				liga:'#',
-				title:'',
-			},
-			{
-				nombre:'Contacto',
-				liga:'#',
-				title:'',
-			},
-		],
+		menu:{
+			selected:'Inicio',
+			elems:[
+				{
+					nombre:'Inicio',
+					liga:'#',
+					title:'',
+				},
+				{
+					nombre:'Acerca de nosotros',
+					liga:'#',
+					title:'',
+				},
+				{
+					nombre:'Historia',
+					liga:'#',
+					title:'',
+				},
+				{
+					nombre:'Contacto',
+					liga:'#',
+					title:'',
+				},
+			]
+		},
+		langs:{
+			selected:'ES',
+			elems:[
+				{
+					nombre:'ES',
+					liga:'#',
+					title:'',
+				},
+				{
+					nombre:'EN',
+					liga:'#',
+					title:'',
+				},
+			]
+		},
 		redes:[
 			{
 				nombre:'LinkedIn',
 				icono:LinkedIn,
-				liga:'#',
+				liga:'https://www.linkedin.com/',
 				title:'',
 			},
 			{
 				nombre:'Vimeo',
 				icono:Vimeo,
-				liga:'#',
+				liga:'https://vimeo.com/es',
 				title:'',
 			},
 			{
 				nombre:'Instagram',
 				icono:Instagram,
-				liga:'#',
+				liga:'https://www.instagram.com/?hl=es-la',
 				title:'',
 			},
 			{
 				nombre:'Twitter',
 				icono:Twitter,
-				liga:'#',
+				liga:'https://twitter.com/?lang=es',
 				title:'',
 			},
 			{
 				nombre:'Facebook',
 				icono:Facebook,
-				liga:'#',
+				liga:'https://es-la.facebook.com/',
 				title:'',
 			},
 		],
@@ -71,7 +89,7 @@ class App extends React.Component {
 	render(){
 		return (
 			<div className="App">
-				<HeaderPage menu={this.state.menu} />
+				<HeaderPage menu={this.state.menu} langs={this.state.langs} />
 				<HomePage />
 				<FooterPage menu={this.state.menu} redes={this.state.redes} />
 			</div>

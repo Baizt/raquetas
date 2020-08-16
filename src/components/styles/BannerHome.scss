@@ -15,8 +15,9 @@
 }
 .container-banner{
 	display: grid;
-	grid-template-columns: minmax(200px, 700px);
+	grid-template-columns: minmax(220px, 700px);
 	height: 100%;
+	margin-left: 30px;
 	align-items: center;
 	justify-items: start;
 	@media screen and (min-width: $min-md){

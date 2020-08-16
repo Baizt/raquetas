@@ -22,4 +22,8 @@
     text-align: right;
     flex: 1;
   }
+  &:hover{
+    background-color: $secondColor;
+    color: #CF4904;
+  }
 }

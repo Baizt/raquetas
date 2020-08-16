@@ -13,7 +13,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: top left;
-	padding: 50px 0px 70px 0px;
+	padding: 50px 20px 70px 20px;
 	display: grid;
 	justify-content: center;
 	grid-auto-columns: minmax(100px, 300px);
@@ -23,6 +23,9 @@
 	@media screen and (min-width: $min-md){
 		background-position: top right;
 		justify-content: end;
+		padding: 50px 0 70px 10px;
+	}
+	@media screen and (min-width: $min-lg){
 		padding: 50px 0 70px 0;
 	}
 	.text-container{
@@ -60,12 +63,11 @@
 				width: 50px;
 				height: 50px;
 				border-radius: 50%;
+				box-sizing: border-box;
 				box-shadow: 0px 6px 18px -2px #000;
 				background-color: $mainColor;
 				position: relative;
 				cursor: pointer;
-				&:active{
-				}
 				&::before{
 					position: absolute;
 					content: '';
@@ -90,24 +92,41 @@
 					left: calc(50% - 8px);
 					border-right: 8px solid $secondColor;
 				}
+				&:active{
+					background-color: $secondColor;
+					&::before{
+						border-right: 8px solid $mainColor;
+					}
+				}
 			}
 			.next{
 				&::before{
 					left: calc(50% - 4px);
 					border-left: 8px solid $secondColor;
 				}
+				&:active{
+					background-color: $secondColor;
+					&::before{
+						border-left: 8px solid $mainColor;
+					}
+				}
 			}
 		}
 	}
 }
 .carrusel-container{
-	padding: 50px 0px 70px 40px;
+	padding: 50px 0px 70px 20px;
 	display: inherit;
+	max-width: 100%;
+	@media screen and (min-width: $min-md){
+		padding: 50px 0px 70px 40px;
+	}
 	.carrusel-window{
 		display: inherit;
 		position: relative;
 		overflow: hidden;
 		height: 344px;
+		max-width: 100%;
 	}
 }
 .carrusel{

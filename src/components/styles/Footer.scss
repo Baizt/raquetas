@@ -16,16 +16,21 @@ footer{
 			"menuFooter menuFooter menuFooter menuFooter pelotaFooter"
 			"redesMenu . . . pelotaFooter";
 	}
-}
-.main-menu {
-	grid-area: mainMenuFooter;
-	text-align: start;
-	@media screen and (min-width: $min-md){
-		text-align: center;
+	.main-menu {
+		grid-area: mainMenuFooter;
+		text-align: start;
+		@media screen and (min-width: $min-md){
+			text-align: center;
+		}
 	}
 }
-.menu-horizontal .menu-item {
-	color: #000;
+.menu-horizontal{
+	.menu-item {
+		color: #000;
+		&:hover{
+			color: $secondColor;
+		}
+	}
 }
 .footer-menu{
 	grid-area: menuFooter;
@@ -52,9 +57,16 @@ footer{
 		display: flex;
 		justify-content: center;
 		align-content: center;
+		padding: 10%;
 		img{
 			width: 12px;
 			height: auto;
+		}
+		&:hover{
+			background-color: $secondColor;
+			img{
+				filter: sepia() saturate(10000%) hue-rotate(11deg) brightness(90%);
+			}
 		}
 	}
 }
