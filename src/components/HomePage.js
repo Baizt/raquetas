@@ -45,7 +45,7 @@ class HomePage extends React.Component {
 			<div>
 				<BannerHome />
 				<Historia historia={this.state.historia} />
-				<Carrusel raquetas={this.state.raquetas} />
+				<Carrusel raquetas={this.state.raquetas} carruselID = 'carrusel-1' />
 				<FullImg image={homeFooterImg} />
 			</div>
 		)

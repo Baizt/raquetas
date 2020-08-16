@@ -12,12 +12,16 @@
 	background-image: url('../../images/banner-pelota.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top right;
+	background-position: top left;
 	padding: 50px 0px 70px 0px;
 	display: grid;
 	justify-content: center;
 	grid-auto-columns: minmax(100px, 300px);
+	@media screen and (min-width: $min-sm){
+		background-position: top center;
+	}
 	@media screen and (min-width: $min-md){
+		background-position: top right;
 		justify-content: end;
 		padding: 50px 0 70px 0;
 	}
@@ -33,9 +37,7 @@
 		p{
 			font-size: 14px;
 			line-height: 2em;
-			@media screen and (min-width: $min-md){
-				padding-right: 50px;
-			}
+			width: 215px;
 		}
 		.posicion-carrusel{
 			display: flex;
@@ -47,6 +49,9 @@
 				width: 8px;
 				height: 8px;
 				// cursor: pointer;
+			}
+			.select{
+				background-color: $mainColor;
 			}
 		}
 		.controles-carrusel{
@@ -104,11 +109,12 @@
 	display: grid;
 	grid-auto-flow: column;
 	position: absolute;
+	left: 0;
 	.container-raqueta{
 		width: 288px;
 		height: 344px;
 		display: inline-flex;
-		margin: 0 10px;
+		margin: 0 18px;
 		position: relative;
 		border-radius: 20px;
 		justify-content: center;
