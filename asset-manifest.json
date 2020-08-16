@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/raquetas/static/css/main.22170d5f.chunk.css",
-    "main.js": "/raquetas/static/js/main.4d5cf03b.chunk.js",
-    "main.js.map": "/raquetas/static/js/main.4d5cf03b.chunk.js.map",
+    "main.css": "/raquetas/static/css/main.8b03621c.chunk.css",
+    "main.js": "/raquetas/static/js/main.4c190742.chunk.js",
+    "main.js.map": "/raquetas/static/js/main.4c190742.chunk.js.map",
     "runtime-main.js": "/raquetas/static/js/runtime-main.5bda4274.js",
     "runtime-main.js.map": "/raquetas/static/js/runtime-main.5bda4274.js.map",
     "static/js/2.757c51a7.chunk.js": "/raquetas/static/js/2.757c51a7.chunk.js",
     "static/js/2.757c51a7.chunk.js.map": "/raquetas/static/js/2.757c51a7.chunk.js.map",
     "index.html": "/raquetas/index.html",
-    "precache-manifest.6943b81077559967704ab7fc1cef7e6c.js": "/raquetas/precache-manifest.6943b81077559967704ab7fc1cef7e6c.js",
+    "precache-manifest.66fcf2aa2a4d214b809aa1f59fe3c51b.js": "/raquetas/precache-manifest.66fcf2aa2a4d214b809aa1f59fe3c51b.js",
     "service-worker.js": "/raquetas/service-worker.js",
-    "static/css/main.22170d5f.chunk.css.map": "/raquetas/static/css/main.22170d5f.chunk.css.map",
+    "static/css/main.8b03621c.chunk.css.map": "/raquetas/static/css/main.8b03621c.chunk.css.map",
     "static/js/2.757c51a7.chunk.js.LICENSE.txt": "/raquetas/static/js/2.757c51a7.chunk.js.LICENSE.txt",
     "static/media/babolat-drive.png": "/raquetas/static/media/babolat-drive.729ffce1.png",
     "static/media/Carrusel.scss": "/raquetas/static/media/banner-pelota.8372a896.jpg",
@@ -28,7 +28,7 @@
   "entrypoints": [
     "static/js/runtime-main.5bda4274.js",
     "static/js/2.757c51a7.chunk.js",
-    "static/css/main.22170d5f.chunk.css",
-    "static/js/main.4d5cf03b.chunk.js"
+    "static/css/main.8b03621c.chunk.css",
+    "static/js/main.4c190742.chunk.js"
   ]
 }
